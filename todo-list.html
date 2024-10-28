@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container app">
+    <div class="app-header"></div>
+    <div class="app-body">
+      <div class="update-modal hide">
+        <h3>ویرایش</h3>
+        <div class="update-header">
+          <label>عنوان :</label>
+          <input class="update-input" type="text">
+        </div>
+        <div class="update-date">
+          <span>تاریخ ایجاد :</span>
+          <span class="update-date-span"></span>
+        </div>
+        <div class="update-btn">
+          <button class="confirm-btn">ویرایش</button>
+          <button class="exit-btn">انصراف</button>
+        </div>
+      </div>
+        <div class="body-app">
+          
+          <form action="#" class="todo-form">
+            <label>اضافه کردن کار جدید :</label>
+            <div class="form-div">
+              <input class="add-input" type="text" autofocus>
+              <div>
+                <button class="add-btn">افزودن</button>
+                <div class="filter-div">
+                  <select class="filter-option">
+                    <option value="all">تمام کار ها</option>
+                    <option value="completed">انجام شده ها</option>
+                    <option value="uncompleted">انجام نشده ها</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="todos-container">
+
+          </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

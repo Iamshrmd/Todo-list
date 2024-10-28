@@ -1,0 +1,191 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root{
+  --pink-color:#e41290;
+  --white-color:#fff;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-family: "Vazirmatn", sans-serif;
+}
+.container{
+  max-width: 1140px;
+  margin: 30px auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.app{
+  width: 800px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.418);
+}
+.app-header{
+  background-color: var(--pink-color);
+  height: 130px;
+}
+.app-body{
+  min-height: 350px;
+}
+.body-app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.todos-container{
+  max-height: 300px;
+  overflow-y: auto;
+}
+.todos-container::-webkit-scrollbar{
+  background-color: var(--white-color);
+}
+.todos-container::-webkit-scrollbar-thumb{
+  cursor: ns-resize;
+  border-radius: 10px;
+  background-image: linear-gradient(60deg ,#e41290,#000000c2);
+}
+.todo-form{
+  margin-top: -70px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.397);
+  background-color: var(--white-color);
+  padding: 2rem 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  width:600px;
+}
+.form-div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+.form-div >div{
+  display: flex;
+  gap: 10rem;
+}
+.todo-form label{
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+.add-input{
+  padding:0.7rem 1rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  font-family: "Vazirmatn", sans-serif;
+}
+.filter-div{
+  flex: 1.5;
+}
+.filter-option{
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: "Vazirmatn", sans-serif;
+}
+.add-btn{
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 1rem 3rem;
+  border: none;
+  background-color: var(--pink-color);
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Vazirmatn", sans-serif;
+  flex: 1;
+}
+.todo-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  width: 600px;
+  margin-block: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.308);
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+.todo-list > div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  column-gap: 10px;
+  flex: 2;
+}
+.todo-list > div img{
+  cursor: pointer;
+}
+.complete{
+  box-shadow: 0 0 5px rgba(58, 180, 1, 0.8);
+  color: rgb(9, 151, 9);
+  background-color: rgba(9, 151, 9, 0.0522);
+}
+/* update modal */
+.update-modal{
+  padding: 3rem 7rem;
+  background-color: #000000c2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  font-size: 1.5rem;
+  transition: 0.8s;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  color: var(--white-color);
+}
+.update-modal h3{
+  font-size: 2rem;
+}
+.update-header{
+  border-top: 1px solid rgb(255, 255, 255);
+  padding: 2rem 0;
+}
+.update-header input{
+  border-radius: 3px;
+  border: none;
+  padding: 1rem;
+  width: 300px;
+  outline: none;
+}
+.update-date{
+  display: flex;
+  align-items: flex-start;
+}
+.update-btn{
+  display: flex;
+  gap: 2rem;
+}
+.exit-btn , .confirm-btn{
+  background-color: #fff;
+  border: none;
+  padding: 1rem 3.5rem;
+  border-radius: 5px;
+  font-family: 'vazirmatn';
+  flex: 1;
+}
+.hide{
+  opacity: 0;
+  z-index: -10;
+  /* display: none; */
+}
+.show{
+  opacity: 1;
+  z-index: 10;
+}
